@@ -3,6 +3,7 @@ package kr.co.service;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 import kr.co.dao.BoardDAO;
 import kr.co.vo.BoardVO;
@@ -17,6 +18,13 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void write(BoardVO boardVO) throws Exception {
 		dao.write(boardVO);
+	}
+	
+	// 게시물 목록 조회
+	@Override
+	public List<BoardVO> list() throws Exception {
+		
+		return dao.list();
 	}
 	
 }

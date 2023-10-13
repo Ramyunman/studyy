@@ -137,7 +137,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
-			<scope>test</scope>
+		<!--  <scope>test</scope>  -->	
 		</dependency>
 		
 		<!-- log4jdbc-log4j2-jdbc4 -->

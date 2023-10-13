@@ -58,4 +58,12 @@
 		WHERE BNO = #{bno}
 </delete>
 
+<select id="listCount" resultType="int">
+<![CDATA[
+	  SELECT COUNT(BNO)
+	    FROM MP_BOARD
+	   WHERE BNO > 0
+]]>
+</select>
+
 </mapper>

@@ -7,6 +7,7 @@ import java.util.List;
 
 import kr.co.dao.BoardDAO;
 import kr.co.vo.BoardVO;
+import kr.co.vo.Criteria;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -22,11 +23,17 @@ public class BoardServiceImpl implements BoardService {
 	
 	// 게시물 목록 조회
 	@Override
-	public List<BoardVO> list() throws Exception {
-		return dao.list();
+	public List<BoardVO> list(Criteria cri) throws Exception {
+		return dao.list(cri);
 	}
 	
-	// 게시글 조회
+	// 게시물 총 갯수
+	@Override
+	public int listCount() throws Exception {
+		return dao.listCount();
+	}
+	
+	// 게시물 조회
 	@Override
 	public BoardVO read(int bno) throws Exception {
 		return dao.read(bno);

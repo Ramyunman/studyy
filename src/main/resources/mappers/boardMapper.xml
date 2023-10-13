@@ -6,13 +6,13 @@
 
 <!-- 게시판 글 작성 -->
 <insert id="insert">
-	insert into mp_board( bno
-						  , title
-						  , content
-						  , writer )
-			values( mp_board_seq.nextval
-						  ,#{title}
-						  ,#{content}
-						  ,#{writer} )
+		INSERT INTO MP_BOARD( BNO
+							  , TITLE
+							  , CONTENT
+						      , WRITER )
+				VALUES( MP_BOARD_SEQ.NEXTVAL
+							  , #{title}
+							  , #{content}
+							  , #{writer} )
 </insert>
 </mapper>

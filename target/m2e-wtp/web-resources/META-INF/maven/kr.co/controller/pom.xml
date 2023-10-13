@@ -21,6 +21,7 @@
 			<url>http://maven.jahia.org/maven2</url>
 		</repository>
 	</repositories>
+	
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -117,13 +118,13 @@
 			<version>1.2</version>
 		</dependency>
 	
-		<!-- spring-jdbc -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework-version}</version>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+    		<version>4.3.8.RELEASE</version>
 		</dependency>
-		
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>

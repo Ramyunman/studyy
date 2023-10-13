@@ -43,9 +43,9 @@
 		</header>
 		<hr />
 		
-		<nav>
-		홈 - 글 작성
-		</nav>
+		<div>
+			<%@include file="nav.jsp" %>
+		</div>
 		<hr />
 		
 		<section id="container">
@@ -72,7 +72,7 @@
 						<tr>
 							<td>
 								<label for="regdate">작성날짜</label>
-								<fmt:formatDate value="${read.regdate}" pattern="yyyy-Mm-dd"/>
+								<fmt:formatDate value="${read.regdate}" pattern="yyyy-MM-dd"/>
 							</td>
 						</tr>
 					</tbody>

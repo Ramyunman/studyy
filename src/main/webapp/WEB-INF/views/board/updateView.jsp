@@ -25,9 +25,9 @@
 		</header>
 		<hr />
 		
-		<nav>
-		홈 - 글 작성
-		</nav>
+		<div>
+			<%@include file="nav.jsp" %>
+		</div>
 		<hr />
 		
 		<section id="container">
@@ -42,30 +42,29 @@
 					</tr>	
 					<tr>
 						<td>
-							<label for="content">내용</label><textarea id="content" name="content" readonly="readonly"><c:out value="${read.content}"/></textarea>
+							<label for="content">내용</label><textarea id="content" name="content"><c:out value="${update.content}"/></textarea>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${read.writer}" readonly="readonly"/>
+							<label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${update.writer}" readonly="readonly"/>
 						</td>
 					</tr>
-						<tr>
-							<td>
-								<label for="regdate">작성날짜</label>
-								<fmt:formatDate value="${read.regdate}" pattern="yyyy-Mm-dd"/>
-							</td>
-						</tr>
-					</tbody>
+					<tr>
+						<td>
+							<label for="regdate">작성날짜</label>
+							<fmt:formatDate value="${update.regdate}" pattern="yyyy-MM-dd"/>
+						</td>
+					</tr>
+				</tbody>
 				</table>
 				<div>
-					<button type="submit" class="update_btn">수정</button>
-					<button type="submit" class="delete_btn">삭제</button>
-					<button type="submit" class="list_btn">목록</button>
+					<button type="submit" class="update_btn">저장</button>
+					<button type="submit" class="cancle_btn">취소</button>
 				</div>
+			</form>
 		</section>
 		<hr />
 	</div>
-
 </body>
 </html>

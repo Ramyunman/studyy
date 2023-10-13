@@ -6,36 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="UTF-8">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<title>게시판</title>
+<title>게시판</title>
 </head>
-
 <script type="text/javascript">
 	$(document).ready(function() {
-		var formObj = $("form[name='readForm']");
-		
-		// 수정
-		$(".update_btn").on("click", function() {
-			formObj.attr("action", "/board/updateView");
-			formObj.attr("method", "get");
-			formObj.submit();
-		})
-		
-		// 삭제
-		$(".delete_btn").on("click", function() {
-			formObj.attr("action", "/board/delete");
-			formObj.attr("method", "post");
-			formObj.submit();
-		})
-		
-		// 취소
-		$(".list_btn").on("click", function() {
+		$(".cancel_btn").on("click", function() {
+			event.preventDefault();
 			location.href = "/board/list";
 		})
 	})
 </script>
-
 <body>
 	<div id="root">
 		<header>
@@ -49,14 +31,13 @@
 		<hr />
 		
 		<section id="container">
-			<form name="readForm" role="form" method="post">
-				<input type="hidden" id="bno" name="bno" value="${read.bno}"/>
-			</form>
+			<form name="updateForm" role="form" method="post" action="/board/update">
+				<input type="hidden" name="bno" value="${update.bno}" readonly="readonly"/>
 			<table>
 				<tbody>
 					<tr>
 						<td>
-							<label for="title">제목</label><input type="text" id="title" name="title" value="${read.title}" readonly="readonly"/>
+							<label for="title">제목</label><input type="text" id="title" name="title" value="${update.title}"/>
 						</td>
 					</tr>	
 					<tr>
@@ -85,5 +66,6 @@
 		</section>
 		<hr />
 	</div>
+
 </body>
 </html>

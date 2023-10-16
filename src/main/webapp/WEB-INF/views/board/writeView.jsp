@@ -19,7 +19,7 @@
 				}
 				formObj.attr("action", "/board/write");
 				formObj.attr("method", "post");
-				formObj.submit();
+			<!-- formObj.submit(); -->	
 			});
 		})
 		function fn_valiChk(){
